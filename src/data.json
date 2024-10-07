@@ -1,0 +1,401 @@
+[
+  {
+    "id": 1,
+    "title": "Classic Vanilla",
+    "type": "Cream-based",
+    "description": "Smooth and creamy vanilla ice cream made with real vanilla beans.",
+    "price": 3.99,
+    "madeBy": "Sweet Delights",
+    "dateAdded": "2024-08-12T00:00:00Z",
+    "ingredients": ["Milk", "Cream", "Sugar", "Vanilla Beans"],
+    "nutrition": {
+      "kcal": 200,
+      "weight": 100,
+      "carbohydrates": 24,
+      "sugar": 22,
+      "fat": 10,
+      "protein": 3,
+      "fiber": 0
+    },
+    "imageUrl": "https://example.com/images/vanilla.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Chocolate Fudge",
+    "type": "Cream-based",
+    "description": "Rich chocolate ice cream with thick swirls of fudge.",
+    "price": 4.5,
+    "madeBy": "ChocoHeaven",
+    "dateAdded": "2024-07-25T00:00:00Z",
+    "ingredients": ["Milk", "Cream", "Cocoa Powder", "Fudge", "Sugar"],
+    "nutrition": {
+      "kcal": 250,
+      "weight": 100,
+      "carbohydrates": 30,
+      "sugar": 27,
+      "fat": 12,
+      "protein": 4,
+      "fiber": 1
+    },
+    "imageUrl": "https://example.com/images/chocolate-fudge.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Strawberry Delight",
+    "type": "Fruit-based",
+    "description": "Fresh strawberry ice cream made with real strawberries.",
+    "price": 3.75,
+    "madeBy": "Berry Bliss",
+    "dateAdded": "2024-09-01T00:00:00Z",
+    "ingredients": ["Milk", "Cream", "Strawberries", "Sugar"],
+    "nutrition": {
+      "kcal": 180,
+      "weight": 100,
+      "carbohydrates": 22,
+      "sugar": 20,
+      "fat": 8,
+      "protein": 2,
+      "fiber": 1
+    },
+    "imageUrl": "https://example.com/images/strawberry.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Mint Chocolate Chip",
+    "type": "Cream-based",
+    "description": "Cool mint ice cream with rich chocolate chips.",
+    "price": 4.2,
+    "madeBy": "Fresh Mints",
+    "dateAdded": "2024-06-18T00:00:00Z",
+    "ingredients": [
+      "Milk",
+      "Cream",
+      "Mint Extract",
+      "Chocolate Chips",
+      "Sugar"
+    ],
+    "nutrition": {
+      "kcal": 230,
+      "weight": 100,
+      "carbohydrates": 28,
+      "sugar": 25,
+      "fat": 11,
+      "protein": 3,
+      "fiber": 1
+    },
+    "imageUrl": "https://example.com/images/mint-chocolate-chip.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Salted Caramel Swirl",
+    "type": "Cream-based",
+    "description": "Creamy ice cream with ribbons of salted caramel.",
+    "price": 4.75,
+    "madeBy": "Caramel Dreams",
+    "dateAdded": "2024-07-04T00:00:00Z",
+    "ingredients": ["Milk", "Cream", "Caramel", "Sugar", "Salt"],
+    "nutrition": {
+      "kcal": 260,
+      "weight": 100,
+      "carbohydrates": 32,
+      "sugar": 29,
+      "fat": 13,
+      "protein": 3,
+      "fiber": 0
+    },
+    "imageUrl": "https://example.com/images/salted-caramel.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Cookies and Cream",
+    "type": "Cream-based",
+    "description": "Vanilla ice cream packed with chunks of chocolate cookies.",
+    "price": 4.0,
+    "madeBy": "Cookie Crush",
+    "dateAdded": "2024-08-05T00:00:00Z",
+    "ingredients": ["Milk", "Cream", "Chocolate Cookies", "Sugar"],
+    "nutrition": {
+      "kcal": 240,
+      "weight": 100,
+      "carbohydrates": 29,
+      "sugar": 26,
+      "fat": 12,
+      "protein": 3,
+      "fiber": 1
+    },
+    "imageUrl": "https://example.com/images/cookies-cream.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Mango Sorbet",
+    "type": "Sorbet",
+    "description": "Refreshing and sweet mango sorbet made with real mangoes.",
+    "price": 3.5,
+    "madeBy": "Tropical Sweets",
+    "dateAdded": "2024-06-10T00:00:00Z",
+    "ingredients": ["Mangoes", "Sugar", "Water"],
+    "nutrition": {
+      "kcal": 150,
+      "weight": 100,
+      "carbohydrates": 36,
+      "sugar": 32,
+      "fat": 0,
+      "protein": 1,
+      "fiber": 2
+    },
+    "imageUrl": "https://example.com/images/mango-sorbet.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Pistachio Dream",
+    "type": "Cream-based",
+    "description": "Delicious pistachio-flavored ice cream with crunchy pistachio pieces.",
+    "price": 4.3,
+    "madeBy": "Nutty Bliss",
+    "dateAdded": "2024-05-15T00:00:00Z",
+    "ingredients": ["Milk", "Cream", "Pistachios", "Sugar"],
+    "nutrition": {
+      "kcal": 250,
+      "weight": 100,
+      "carbohydrates": 27,
+      "sugar": 24,
+      "fat": 14,
+      "protein": 4,
+      "fiber": 2
+    },
+    "imageUrl": "https://example.com/images/pistachio.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Lemon Sorbet",
+    "type": "Sorbet",
+    "description": "Zesty and tangy lemon sorbet for a refreshing treat.",
+    "price": 3.2,
+    "madeBy": "Citrus Blast",
+    "dateAdded": "2024-07-30T00:00:00Z",
+    "ingredients": ["Lemon Juice", "Sugar", "Water"],
+    "nutrition": {
+      "kcal": 120,
+      "weight": 100,
+      "carbohydrates": 30,
+      "sugar": 28,
+      "fat": 0,
+      "protein": 0,
+      "fiber": 1
+    },
+    "imageUrl": "https://example.com/images/lemon-sorbet.jpg"
+  },
+  {
+    "id": 10,
+    "title": "Coffee Bean Bliss",
+    "type": "Cream-based",
+    "description": "Rich and smooth coffee ice cream made with real coffee beans.",
+    "price": 4.25,
+    "madeBy": "Caffeine Cravings",
+    "dateAdded": "2024-06-22T00:00:00Z",
+    "ingredients": ["Milk", "Cream", "Coffee Beans", "Sugar"],
+    "nutrition": {
+      "kcal": 240,
+      "weight": 100,
+      "carbohydrates": 25,
+      "sugar": 23,
+      "fat": 13,
+      "protein": 3,
+      "fiber": 0
+    },
+    "imageUrl": "https://example.com/images/coffee.jpg"
+  },
+  {
+    "id": 11,
+    "title": "Hazelnut Crunch",
+    "type": "Cream-based",
+    "description": "Creamy hazelnut ice cream with crunchy hazelnut pieces.",
+    "price": 4.6,
+    "madeBy": "Nutty Heaven",
+    "dateAdded": "2024-07-01T00:00:00Z",
+    "ingredients": ["Milk", "Cream", "Hazelnuts", "Sugar"],
+    "nutrition": {
+      "kcal": 270,
+      "weight": 100,
+      "carbohydrates": 29,
+      "sugar": 25,
+      "fat": 15,
+      "protein": 4,
+      "fiber": 2
+    },
+    "imageUrl": "https://example.com/images/hazelnut.jpg"
+  },
+  {
+    "id": 12,
+    "title": "Blueberry Cheesecake",
+    "type": "Cream-based",
+    "description": "Blueberry ice cream with swirls of cheesecake pieces.",
+    "price": 4.5,
+    "madeBy": "Cheesecake Craze",
+    "dateAdded": "2024-08-02T00:00:00Z",
+    "ingredients": [
+      "Milk",
+      "Cream",
+      "Blueberries",
+      "Cheesecake Pieces",
+      "Sugar"
+    ],
+    "nutrition": {
+      "kcal": 260,
+      "weight": 100,
+      "carbohydrates": 32,
+      "sugar": 29,
+      "fat": 13,
+      "protein": 4,
+      "fiber": 1
+    },
+    "imageUrl": "https://example.com/images/blueberry-cheesecake.jpg"
+  },
+  {
+    "id": 13,
+    "title": "Raspberry Ripple",
+    "type": "Fruit-based",
+    "description": "Tangy raspberry ice cream with a ripple of fresh raspberry sauce.",
+    "price": 3.9,
+    "madeBy": "Berry Delight",
+    "dateAdded": "2024-08-10T00:00:00Z",
+    "ingredients": ["Milk", "Cream", "Raspberries", "Sugar"],
+    "nutrition": {
+      "kcal": 190,
+      "weight": 100,
+      "carbohydrates": 25,
+      "sugar": 23,
+      "fat": 9,
+      "protein": 2,
+      "fiber": 2
+    },
+    "imageUrl": "https://example.com/images/raspberry-ripple.jpg"
+  },
+  {
+    "id": 14,
+    "title": "Peanut Butter Swirl",
+    "type": "Cream-based",
+    "description": "Rich and creamy ice cream with swirls of peanut butter.",
+    "price": 4.8,
+    "madeBy": "Nutty Delights",
+    "dateAdded": "2024-07-18T00:00:00Z",
+    "ingredients": ["Milk", "Cream", "Peanut Butter", "Sugar"],
+    "nutrition": {
+      "kcal": 280,
+      "weight": 100,
+      "carbohydrates": 26,
+      "sugar": 23,
+      "fat": 16,
+      "protein": 5,
+      "fiber": 2
+    },
+    "imageUrl": "https://example.com/images/peanut-butter.jpg"
+  },
+  {
+    "id": 15,
+    "title": "Coconut Bliss",
+    "type": "Vegan",
+    "description": "Dairy-free coconut ice cream made with coconut milk.",
+    "price": 4.6,
+    "madeBy": "Vegan Treats",
+    "dateAdded": "2024-06-12T00:00:00Z",
+    "ingredients": ["Coconut Milk", "Sugar", "Coconut Flakes"],
+    "nutrition": {
+      "kcal": 230,
+      "weight": 100,
+      "carbohydrates": 24,
+      "sugar": 22,
+      "fat": 14,
+      "protein": 2,
+      "fiber": 2
+    },
+    "imageUrl": "https://example.com/images/coconut.jpg"
+  },
+  {
+    "id": 16,
+    "title": "Banana Split",
+    "type": "Cream-based",
+    "description": "Classic banana ice cream with swirls of chocolate and strawberry sauce.",
+    "price": 4.9,
+    "madeBy": "Banana Bonanza",
+    "dateAdded": "2024-07-25T00:00:00Z",
+    "ingredients": [
+      "Milk",
+      "Cream",
+      "Bananas",
+      "Chocolate Sauce",
+      "Strawberry Sauce",
+      "Sugar"
+    ],
+    "nutrition": {
+      "kcal": 270,
+      "weight": 100,
+      "carbohydrates": 33,
+      "sugar": 30,
+      "fat": 12,
+      "protein": 3,
+      "fiber": 2
+    },
+    "imageUrl": "https://example.com/images/banana-split.jpg"
+  },
+  {
+    "id": 17,
+    "title": "Almond Crunch",
+    "type": "Cream-based",
+    "description": "Creamy almond ice cream with crunchy almond pieces.",
+    "price": 4.7,
+    "madeBy": "Nutty Treats",
+    "dateAdded": "2024-06-15T00:00:00Z",
+    "ingredients": ["Milk", "Cream", "Almonds", "Sugar"],
+    "nutrition": {
+      "kcal": 260,
+      "weight": 100,
+      "carbohydrates": 28,
+      "sugar": 25,
+      "fat": 13,
+      "protein": 4,
+      "fiber": 2
+    },
+    "imageUrl": "https://example.com/images/almond-crunch.jpg"
+  },
+  {
+    "id": 18,
+    "title": "Orange Sorbet",
+    "type": "Sorbet",
+    "description": "Bright and tangy orange sorbet made with real oranges.",
+    "price": 3.4,
+    "madeBy": "Citrus Fresh",
+    "dateAdded": "2024-06-28T00:00:00Z",
+    "ingredients": ["Orange Juice", "Sugar", "Water"],
+    "nutrition": {
+      "kcal": 130,
+      "weight": 100,
+      "carbohydrates": 33,
+      "sugar": 30,
+      "fat": 0,
+      "protein": 0,
+      "fiber": 1
+    },
+    "imageUrl": "https://example.com/images/orange-sorbet.jpg"
+  },
+  {
+    "id": 19,
+    "title": "Choco Hazelnut Delight",
+    "type": "Cream-based",
+    "description": "Chocolate ice cream with swirls of hazelnut spread.",
+    "price": 5.0,
+    "madeBy": "Choco Nuts",
+    "dateAdded": "2024-07-20T00:00:00Z",
+    "ingredients": ["Milk", "Cream", "Cocoa", "Hazelnut Spread", "Sugar"],
+    "nutrition": {
+      "kcal": 280,
+      "weight": 100,
+      "carbohydrates": 34,
+      "sugar": 30,
+      "fat": 14,
+      "protein": 5,
+      "fiber": 2
+    },
+    "imageUrl": "https://example.com/images/choco-hazelnut.jpg"
+  }
+]
