@@ -1,0 +1,12 @@
+.nav-bar {
+  grid-column: 3 / -3;
+  display: grid;
+  grid-template-columns: subgrid;
+  .nav-link,
+  .search {
+    background-color: aliceblue;
+    border-radius: 0.5em;
+    padding: 1em;
+    grid-column: span 2;
+  }
+}

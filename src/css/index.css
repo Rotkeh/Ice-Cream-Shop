@@ -23,11 +23,19 @@ a:hover {
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+}
+
+#root {
+  display: grid;
+  grid: auto-flow min-content / repeat(12, 1fr);
+}
+
+main {
+  grid-column: 3 / -3;
+  display: grid;
+  grid-template-columns: subgrid;
 }
 
 h1 {
