@@ -28,3 +28,7 @@ export interface IceCreamProp {
 export interface IceCreamNutritionProp {
   nutrition: Nutrition;
 }
+
+export interface IceCreamIngredientProp {
+  ingredients: string[];
+}

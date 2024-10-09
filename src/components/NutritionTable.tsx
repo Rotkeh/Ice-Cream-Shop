@@ -1,22 +1,24 @@
 import { IceCreamNutritionProp } from "../interfaces";
+import "../css/NutritionTable.css";
 
 export function NutritionTable({ nutrition }: IceCreamNutritionProp) {
   return (
-    <div>
-      <p>weight</p>
-      <p>{nutrition.weight}</p>
-      <p>kcal</p>
-      <p>{nutrition.kcal}</p>
-      <p>carbohydrates</p>
-      <p>{nutrition.carbohydrates}</p>
-      <p>sugar</p>
-      <p>{nutrition.sugar}</p>
-      <p>fat</p>
-      <p>{nutrition.fat}</p>
-      <p>protein</p>
-      <p>{nutrition.protein}</p>
-      <p>fiber</p>
-      <p>{nutrition.fiber}</p>
-    </div>
+    <section className="item-nutrition">
+      <h5 className="item-nutrition_header">Nutrition</h5>
+      <p className="nutrition_category">weight</p>
+      <p className="nutrition_data">{nutrition.weight}</p>
+      <p className="nutrition_category">kcal</p>
+      <p className="nutrition_data">{nutrition.kcal}</p>
+      <p className="nutrition_category">carbohydrates</p>
+      <p className="nutrition_data">{nutrition.carbohydrates}</p>
+      <p className="nutrition_category">sugar</p>
+      <p className="nutrition_data">{nutrition.sugar}</p>
+      <p className="nutrition_category">fat</p>
+      <p className="nutrition_data">{nutrition.fat}</p>
+      <p className="nutrition_category">protein</p>
+      <p className="nutrition_data">{nutrition.protein}</p>
+      <p className="nutrition_category">fiber</p>
+      <p className="nutrition_data">{nutrition.fiber}</p>
+    </section>
   );
 }

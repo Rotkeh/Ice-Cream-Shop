@@ -1,14 +1,13 @@
 import { useLoaderData } from "react-router-dom";
 import { IceCream } from "../interfaces";
 import { useState } from "react";
-import { NutritionTable, SimiliarProducts } from "../components";
+import { Ingredients, NutritionTable, SimiliarProducts } from "../components";
 import "../css/ItemPage.css";
 
 export function ItemPage() {
   const iceCreamData = useLoaderData() as IceCream;
   const [iceCream] = useState<IceCream>(iceCreamData);
   const [count, setCount] = useState<number>(1);
-  console.log(iceCream);
   return (
     <main>
       <figure className="item_img-container">
@@ -24,27 +23,29 @@ export function ItemPage() {
         name=""
         id=""
         min={1}
-        onChange={(e) => setCount(parseInt(e.target.value))}
+        max={99}
+        onChange={(e) => {
+          if (parseInt(e.target.value) > 99) {
+            setCount(99);
+          } else {
+            setCount(parseInt(e.target.value));
+          }
+        }}
       />
       <p className="item_price">
-        {count > 1 ? `${count} x ${iceCream.price}` : iceCream.price}
+        {count > 1
+          ? `${count} x ${iceCream.price}$ = ${iceCream.price * count}$`
+          : iceCream.price + "$"}
       </p>
       <button className="item_button">Buy now</button>
       <button className="item_button">Add to cart</button>
       <div className="line" />
-      <section className="item_info">
+      <section className="item-info">
         <p>Made by {iceCream.madeBy}</p>
         <p>Released {iceCream.dateAdded.toString()}</p>
       </section>
-      <section className="item_nutrition">
-        <h5>Nutrition</h5>
-        <NutritionTable nutrition={iceCream.nutrition} />
-      </section>
-      <section className="item_ingredients">
-        {iceCream.ingredients.map((ingredient) => (
-          <p key={ingredient}>{ingredient}</p>
-        ))}
-      </section>
+      <NutritionTable nutrition={iceCream.nutrition} />
+      <Ingredients ingredients={iceCream.ingredients} />
       <h5 className="item-similiar_header">You may also like</h5>
       <SimiliarProducts iceCream={iceCream} />
     </main>

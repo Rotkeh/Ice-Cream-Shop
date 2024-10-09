@@ -7,7 +7,7 @@ export function Navbar() {
       <NavLink to={"browse"} className={"nav-link"}>
         Browse
       </NavLink>
-      <NavLink to={"mix"} className={"nav-link"}>
+      <NavLink to={"custom"} className={"nav-link"}>
         Make your own
       </NavLink>
       <NavLink to={"store"} className={"nav-link"}>

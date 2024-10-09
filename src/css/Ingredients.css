@@ -1,0 +1,9 @@
+.item-ingredients {
+  grid-column: 1 / 5;
+  padding: 2rem;
+  border: 2px solid black;
+  .item-ingredients_header {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+}

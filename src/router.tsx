@@ -4,10 +4,13 @@ import {
   Route,
 } from "react-router-dom";
 import { App } from "./components";
-import { HomePage } from "./pages";
-import { BrowsePage } from "./pages/BrowsePage";
-import { ItemPage } from "./pages/ItemPage";
-import { ErrorPage } from "./pages/ErrorPage";
+import {
+  BrowsePage,
+  CustomIceCreamPage,
+  ErrorPage,
+  HomePage,
+  ItemPage,
+} from "./pages";
 import { fetchDataFromId } from "./loaders/ItemPageLoader";
 
 export const router = createBrowserRouter(
@@ -15,6 +18,7 @@ export const router = createBrowserRouter(
     <Route element={<App />} path="/">
       <Route index element={<HomePage />} />
       <Route element={<BrowsePage />} path="browse" />
+      <Route element={<CustomIceCreamPage />} path="custom" />
       <Route
         element={<ItemPage />}
         path="item/:id"

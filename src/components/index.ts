@@ -8,3 +8,4 @@ export * from "./ImageGallery";
 export * from "./Pagination";
 export * from "./NutritionTable";
 export * from "./SimiliarProducts";
+export * from "./Ingredients";

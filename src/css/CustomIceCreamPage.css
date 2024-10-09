@@ -1,0 +1,35 @@
+.custom_header {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.custom-flavors {
+  grid-column: 1 / 5;
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-template-rows: min-content;
+  padding: 2rem;
+  .flavors_header {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .flavors_list {
+    overflow: scroll;
+    height: 0;
+    min-height: 100%;
+    grid-column: 2 / 4;
+    border: 1px solid black;
+  }
+}
+
+.custom_ice-cream {
+  grid-column: 5 / -1;
+  padding: 2rem;
+  .custom_select {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+  }
+}
