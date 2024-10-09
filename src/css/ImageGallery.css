@@ -1,0 +1,13 @@
+.info_gallery {
+  grid-column: 1 /-1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 0;
+  .gallery_img_container {
+    margin: 1rem 0;
+    grid-column: span 1;
+    img {
+      width: 100%;
+    }
+  }
+}

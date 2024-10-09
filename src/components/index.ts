@@ -4,3 +4,7 @@ export * from "./Header";
 export * from "./HeaderIcons";
 export * from "./Navbar";
 export * from "./IceCreamCard";
+export * from "./ImageGallery";
+export * from "./Pagination";
+export * from "./NutritionTable";
+export * from "./SimiliarProducts";

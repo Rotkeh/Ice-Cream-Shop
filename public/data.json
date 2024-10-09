@@ -6,7 +6,7 @@
     "description": "Smooth and creamy vanilla ice cream made with real vanilla beans.",
     "price": 3.99,
     "madeBy": "Sweet Delights",
-    "dateAdded": "2024-08-12T00:00:00Z",
+    "dateAdded": "2024-08-12",
     "ingredients": ["Milk", "Cream", "Sugar", "Vanilla Beans"],
     "nutrition": {
       "kcal": 200,
@@ -17,7 +17,7 @@
       "protein": 3,
       "fiber": 0
     },
-    "imageUrl": "https://example.com/images/vanilla.jpg"
+    "imageUrl": "https://cdn.loveandlemons.com/wp-content/uploads/2023/06/homemade-ice-cream.jpg"
   },
   {
     "id": 2,
@@ -26,7 +26,7 @@
     "description": "Rich chocolate ice cream with thick swirls of fudge.",
     "price": 4.5,
     "madeBy": "ChocoHeaven",
-    "dateAdded": "2024-07-25T00:00:00Z",
+    "dateAdded": "2024-07-25",
     "ingredients": ["Milk", "Cream", "Cocoa Powder", "Fudge", "Sugar"],
     "nutrition": {
       "kcal": 250,
@@ -37,7 +37,7 @@
       "protein": 4,
       "fiber": 1
     },
-    "imageUrl": "https://example.com/images/chocolate-fudge.jpg"
+    "imageUrl": "https://cdn.loveandlemons.com/wp-content/uploads/2023/06/homemade-ice-cream.jpg"
   },
   {
     "id": 3,
@@ -46,7 +46,7 @@
     "description": "Fresh strawberry ice cream made with real strawberries.",
     "price": 3.75,
     "madeBy": "Berry Bliss",
-    "dateAdded": "2024-09-01T00:00:00Z",
+    "dateAdded": "2024-09-01",
     "ingredients": ["Milk", "Cream", "Strawberries", "Sugar"],
     "nutrition": {
       "kcal": 180,
@@ -57,7 +57,7 @@
       "protein": 2,
       "fiber": 1
     },
-    "imageUrl": "https://example.com/images/strawberry.jpg"
+    "imageUrl": "https://cdn.loveandlemons.com/wp-content/uploads/2023/06/homemade-ice-cream.jpg"
   },
   {
     "id": 4,
@@ -66,7 +66,7 @@
     "description": "Cool mint ice cream with rich chocolate chips.",
     "price": 4.2,
     "madeBy": "Fresh Mints",
-    "dateAdded": "2024-06-18T00:00:00Z",
+    "dateAdded": "2024-06-18",
     "ingredients": [
       "Milk",
       "Cream",
@@ -83,7 +83,7 @@
       "protein": 3,
       "fiber": 1
     },
-    "imageUrl": "https://example.com/images/mint-chocolate-chip.jpg"
+    "imageUrl": "https://cdn.loveandlemons.com/wp-content/uploads/2023/06/homemade-ice-cream.jpg"
   },
   {
     "id": 5,
@@ -92,7 +92,7 @@
     "description": "Creamy ice cream with ribbons of salted caramel.",
     "price": 4.75,
     "madeBy": "Caramel Dreams",
-    "dateAdded": "2024-07-04T00:00:00Z",
+    "dateAdded": "2024-07-04",
     "ingredients": ["Milk", "Cream", "Caramel", "Sugar", "Salt"],
     "nutrition": {
       "kcal": 260,
@@ -103,7 +103,7 @@
       "protein": 3,
       "fiber": 0
     },
-    "imageUrl": "https://example.com/images/salted-caramel.jpg"
+    "imageUrl": "https://cdn.loveandlemons.com/wp-content/uploads/2023/06/homemade-ice-cream.jpg"
   },
   {
     "id": 6,
@@ -112,7 +112,7 @@
     "description": "Vanilla ice cream packed with chunks of chocolate cookies.",
     "price": 4.0,
     "madeBy": "Cookie Crush",
-    "dateAdded": "2024-08-05T00:00:00Z",
+    "dateAdded": "2024-08-05",
     "ingredients": ["Milk", "Cream", "Chocolate Cookies", "Sugar"],
     "nutrition": {
       "kcal": 240,
@@ -123,7 +123,7 @@
       "protein": 3,
       "fiber": 1
     },
-    "imageUrl": "https://example.com/images/cookies-cream.jpg"
+    "imageUrl": "https://cdn.loveandlemons.com/wp-content/uploads/2023/06/homemade-ice-cream.jpg"
   },
   {
     "id": 7,
@@ -132,7 +132,7 @@
     "description": "Refreshing and sweet mango sorbet made with real mangoes.",
     "price": 3.5,
     "madeBy": "Tropical Sweets",
-    "dateAdded": "2024-06-10T00:00:00Z",
+    "dateAdded": "2024-06-10",
     "ingredients": ["Mangoes", "Sugar", "Water"],
     "nutrition": {
       "kcal": 150,
@@ -143,7 +143,7 @@
       "protein": 1,
       "fiber": 2
     },
-    "imageUrl": "https://example.com/images/mango-sorbet.jpg"
+    "imageUrl": "https://cdn.loveandlemons.com/wp-content/uploads/2023/06/homemade-ice-cream.jpg"
   },
   {
     "id": 8,
@@ -152,7 +152,7 @@
     "description": "Delicious pistachio-flavored ice cream with crunchy pistachio pieces.",
     "price": 4.3,
     "madeBy": "Nutty Bliss",
-    "dateAdded": "2024-05-15T00:00:00Z",
+    "dateAdded": "2024-05-15",
     "ingredients": ["Milk", "Cream", "Pistachios", "Sugar"],
     "nutrition": {
       "kcal": 250,
@@ -163,7 +163,7 @@
       "protein": 4,
       "fiber": 2
     },
-    "imageUrl": "https://example.com/images/pistachio.jpg"
+    "imageUrl": "https://cdn.loveandlemons.com/wp-content/uploads/2023/06/homemade-ice-cream.jpg"
   },
   {
     "id": 9,
@@ -172,7 +172,7 @@
     "description": "Zesty and tangy lemon sorbet for a refreshing treat.",
     "price": 3.2,
     "madeBy": "Citrus Blast",
-    "dateAdded": "2024-07-30T00:00:00Z",
+    "dateAdded": "2024-07-30",
     "ingredients": ["Lemon Juice", "Sugar", "Water"],
     "nutrition": {
       "kcal": 120,
@@ -183,7 +183,7 @@
       "protein": 0,
       "fiber": 1
     },
-    "imageUrl": "https://example.com/images/lemon-sorbet.jpg"
+    "imageUrl": "https://cdn.loveandlemons.com/wp-content/uploads/2023/06/homemade-ice-cream.jpg"
   },
   {
     "id": 10,
@@ -192,7 +192,7 @@
     "description": "Rich and smooth coffee ice cream made with real coffee beans.",
     "price": 4.25,
     "madeBy": "Caffeine Cravings",
-    "dateAdded": "2024-06-22T00:00:00Z",
+    "dateAdded": "2024-06-22",
     "ingredients": ["Milk", "Cream", "Coffee Beans", "Sugar"],
     "nutrition": {
       "kcal": 240,
@@ -203,7 +203,7 @@
       "protein": 3,
       "fiber": 0
     },
-    "imageUrl": "https://example.com/images/coffee.jpg"
+    "imageUrl": "https://cdn.loveandlemons.com/wp-content/uploads/2023/06/homemade-ice-cream.jpg"
   },
   {
     "id": 11,
@@ -212,7 +212,7 @@
     "description": "Creamy hazelnut ice cream with crunchy hazelnut pieces.",
     "price": 4.6,
     "madeBy": "Nutty Heaven",
-    "dateAdded": "2024-07-01T00:00:00Z",
+    "dateAdded": "2024-07-01",
     "ingredients": ["Milk", "Cream", "Hazelnuts", "Sugar"],
     "nutrition": {
       "kcal": 270,
@@ -223,7 +223,7 @@
       "protein": 4,
       "fiber": 2
     },
-    "imageUrl": "https://example.com/images/hazelnut.jpg"
+    "imageUrl": "https://cdn.loveandlemons.com/wp-content/uploads/2023/06/homemade-ice-cream.jpg"
   },
   {
     "id": 12,
@@ -232,7 +232,7 @@
     "description": "Blueberry ice cream with swirls of cheesecake pieces.",
     "price": 4.5,
     "madeBy": "Cheesecake Craze",
-    "dateAdded": "2024-08-02T00:00:00Z",
+    "dateAdded": "2024-08-02",
     "ingredients": [
       "Milk",
       "Cream",
@@ -249,7 +249,7 @@
       "protein": 4,
       "fiber": 1
     },
-    "imageUrl": "https://example.com/images/blueberry-cheesecake.jpg"
+    "imageUrl": "https://cdn.loveandlemons.com/wp-content/uploads/2023/06/homemade-ice-cream.jpg"
   },
   {
     "id": 13,
@@ -258,7 +258,7 @@
     "description": "Tangy raspberry ice cream with a ripple of fresh raspberry sauce.",
     "price": 3.9,
     "madeBy": "Berry Delight",
-    "dateAdded": "2024-08-10T00:00:00Z",
+    "dateAdded": "2024-08-10",
     "ingredients": ["Milk", "Cream", "Raspberries", "Sugar"],
     "nutrition": {
       "kcal": 190,
@@ -269,7 +269,7 @@
       "protein": 2,
       "fiber": 2
     },
-    "imageUrl": "https://example.com/images/raspberry-ripple.jpg"
+    "imageUrl": "https://cdn.loveandlemons.com/wp-content/uploads/2023/06/homemade-ice-cream.jpg"
   },
   {
     "id": 14,
@@ -278,7 +278,7 @@
     "description": "Rich and creamy ice cream with swirls of peanut butter.",
     "price": 4.8,
     "madeBy": "Nutty Delights",
-    "dateAdded": "2024-07-18T00:00:00Z",
+    "dateAdded": "2024-07-18",
     "ingredients": ["Milk", "Cream", "Peanut Butter", "Sugar"],
     "nutrition": {
       "kcal": 280,
@@ -289,7 +289,7 @@
       "protein": 5,
       "fiber": 2
     },
-    "imageUrl": "https://example.com/images/peanut-butter.jpg"
+    "imageUrl": "https://cdn.loveandlemons.com/wp-content/uploads/2023/06/homemade-ice-cream.jpg"
   },
   {
     "id": 15,
@@ -298,7 +298,7 @@
     "description": "Dairy-free coconut ice cream made with coconut milk.",
     "price": 4.6,
     "madeBy": "Vegan Treats",
-    "dateAdded": "2024-06-12T00:00:00Z",
+    "dateAdded": "2024-06-12",
     "ingredients": ["Coconut Milk", "Sugar", "Coconut Flakes"],
     "nutrition": {
       "kcal": 230,
@@ -309,7 +309,7 @@
       "protein": 2,
       "fiber": 2
     },
-    "imageUrl": "https://example.com/images/coconut.jpg"
+    "imageUrl": "https://cdn.loveandlemons.com/wp-content/uploads/2023/06/homemade-ice-cream.jpg"
   },
   {
     "id": 16,
@@ -318,7 +318,7 @@
     "description": "Classic banana ice cream with swirls of chocolate and strawberry sauce.",
     "price": 4.9,
     "madeBy": "Banana Bonanza",
-    "dateAdded": "2024-07-25T00:00:00Z",
+    "dateAdded": "2024-07-25",
     "ingredients": [
       "Milk",
       "Cream",
@@ -336,7 +336,7 @@
       "protein": 3,
       "fiber": 2
     },
-    "imageUrl": "https://example.com/images/banana-split.jpg"
+    "imageUrl": "https://cdn.loveandlemons.com/wp-content/uploads/2023/06/homemade-ice-cream.jpg"
   },
   {
     "id": 17,
@@ -345,7 +345,7 @@
     "description": "Creamy almond ice cream with crunchy almond pieces.",
     "price": 4.7,
     "madeBy": "Nutty Treats",
-    "dateAdded": "2024-06-15T00:00:00Z",
+    "dateAdded": "2024-06-15",
     "ingredients": ["Milk", "Cream", "Almonds", "Sugar"],
     "nutrition": {
       "kcal": 260,
@@ -356,7 +356,7 @@
       "protein": 4,
       "fiber": 2
     },
-    "imageUrl": "https://example.com/images/almond-crunch.jpg"
+    "imageUrl": "https://cdn.loveandlemons.com/wp-content/uploads/2023/06/homemade-ice-cream.jpg"
   },
   {
     "id": 18,
@@ -365,7 +365,7 @@
     "description": "Bright and tangy orange sorbet made with real oranges.",
     "price": 3.4,
     "madeBy": "Citrus Fresh",
-    "dateAdded": "2024-06-28T00:00:00Z",
+    "dateAdded": "2024-06-28",
     "ingredients": ["Orange Juice", "Sugar", "Water"],
     "nutrition": {
       "kcal": 130,
@@ -376,7 +376,7 @@
       "protein": 0,
       "fiber": 1
     },
-    "imageUrl": "https://example.com/images/orange-sorbet.jpg"
+    "imageUrl": "https://cdn.loveandlemons.com/wp-content/uploads/2023/06/homemade-ice-cream.jpg"
   },
   {
     "id": 19,
@@ -385,7 +385,7 @@
     "description": "Chocolate ice cream with swirls of hazelnut spread.",
     "price": 5.0,
     "madeBy": "Choco Nuts",
-    "dateAdded": "2024-07-20T00:00:00Z",
+    "dateAdded": "2024-07-20",
     "ingredients": ["Milk", "Cream", "Cocoa", "Hazelnut Spread", "Sugar"],
     "nutrition": {
       "kcal": 280,
@@ -396,6 +396,6 @@
       "protein": 5,
       "fiber": 2
     },
-    "imageUrl": "https://example.com/images/choco-hazelnut.jpg"
+    "imageUrl": "https://cdn.loveandlemons.com/wp-content/uploads/2023/06/homemade-ice-cream.jpg"
   }
 ]

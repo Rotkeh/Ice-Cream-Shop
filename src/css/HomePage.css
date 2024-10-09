@@ -1,28 +1,52 @@
-.hero_img {
-  background: url(../assets/HeroImg.png);
-  background-position: center;
-  background-size: cover;
+.hero_content {
   grid-column: 1 / -1;
-  padding: 5em 0;
+
+  .hero_img {
+    background: url(../assets/HeroImg.png);
+    background-position: center;
+    background-size: cover;
+    padding: 10em 0;
+  }
+  .hero_header {
+    grid-column: 1/-1;
+    text-align: center;
+    margin: 3rem 0;
+    font-size: 3rem;
+  }
+  .hero_text {
+    grid-column: 1/-1;
+    text-align: center;
+    margin: 3rem 0;
+  }
 }
 
 .main_intro {
+  margin: 1rem;
+  border-radius: 3rem;
   grid-column: 1 / -1;
-  background-color: antiquewhite;
-  height: 300px;
+  background-color: var(--color-2);
   display: grid;
   grid-template-columns: subgrid;
-
+  padding: 3rem 0;
   .intro_header {
-    grid-column: 3 / 5;
+    grid-column: 1 / 6;
+    text-align: center;
+    font-size: 2rem;
   }
   .intro_text {
     grid-column: 1 / 6;
+    padding: 2rem;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 120%;
   }
   .intro-promo_header {
     grid-column: 6 / 8;
+    text-align: center;
+    font-size: 1.5rem;
   }
   .intro_image-container {
+    margin: 1rem 0;
     grid-column: 6 / 8;
     .intro_image {
       width: 100%;
@@ -35,38 +59,38 @@
 .main_cards {
   grid-column: 1 / -1;
   display: grid;
+  margin: 1rem;
+  border-radius: 3rem;
   grid-template-columns: subgrid;
-  background-color: aquamarine;
-  height: 300px;
+  background-color: var(--color-5);
   .cards_header {
     grid-column: 1 / -1;
     text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
   }
   .cards {
-    grid-column: 1 / -1;
-    display: flex;
-    justify-content: space-around;
+    grid-column: 2 / -2;
+    display: grid;
+    grid-template-columns: subgrid;
   }
 }
 .main_info {
   grid-column: 1 / -1;
   display: grid;
+  border-radius: 3rem;
   grid-template-columns: subgrid;
-  background-color: bisque;
-  height: 200px;
+  background-color: var(--color-2);
+  padding: 3rem 0;
   .info_header {
     grid-column: 1 / -1;
     text-align: center;
+    font-size: 2rem;
   }
   .info_text {
     grid-column: span 4;
-  }
-  .info_gallery {
-    grid-column: 1 /-1;
-    display: grid;
-    grid-template-columns: subgrid;
-    .gallery_img_container {
-      grid-column: span 2;
-    }
+    padding: 1.5rem;
+    font-size: 1.25rem;
+    text-align: center;
   }
 }

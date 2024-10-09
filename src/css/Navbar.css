@@ -2,11 +2,33 @@
   grid-column: 3 / -3;
   display: grid;
   grid-template-columns: subgrid;
+  line-height: 1.5;
   .nav-link,
   .search {
-    background-color: aliceblue;
+    background-color: var(--color-3);
     border-radius: 0.5em;
-    padding: 1em;
     grid-column: span 2;
+    text-align: center;
+    align-self: center;
+    padding: 0.5em;
+    font-size: 1.5rem;
+  }
+  .search {
+    display: flex;
+    align-items: center;
+    input {
+      line-height: 1.5;
+      font-size: 1.5rem;
+      width: 100%;
+      background-color: white;
+      border-radius: 0.5em;
+      border: none;
+      padding: 0;
+    }
+    button {
+      padding: 0;
+      font-size: 1.5rem;
+      border: none;
+    }
   }
 }

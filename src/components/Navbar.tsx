@@ -15,7 +15,7 @@ export function Navbar() {
       </NavLink>
       <form className="search" action="">
         <button>O</button>
-        <input type="text" name="" id="" />
+        <input placeholder="Search" type="text" name="" id="" />
       </form>
     </nav>
   );

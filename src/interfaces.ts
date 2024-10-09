@@ -5,13 +5,13 @@ export interface IceCream {
   description: string;
   price: number;
   madeBy: string;
-  dateAdded: Date;
+  dateAdded: string;
   ingredients: string[];
-  nutrition: nutrition;
+  nutrition: Nutrition;
   imageUrl: string;
 }
 
-export interface nutrition {
+export interface Nutrition {
   kcal: number;
   weight: number;
   carbohydrates: number;
@@ -19,4 +19,12 @@ export interface nutrition {
   fat: number;
   protein: number;
   fiber: number;
+}
+
+export interface IceCreamProp {
+  iceCream: IceCream;
+}
+
+export interface IceCreamNutritionProp {
+  nutrition: Nutrition;
 }
