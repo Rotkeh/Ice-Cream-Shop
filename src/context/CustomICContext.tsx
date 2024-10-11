@@ -1,7 +1,7 @@
 import { createContext, ReactNode, useState } from "react";
 import { Flavor, IDraggableItem, IFlavorsContext } from "../interfaces";
 
-interface IFavoriteProviderProps {
+interface IFlavorProviderProps {
   children: ReactNode;
 }
 
@@ -9,7 +9,7 @@ export const FlavorContext = createContext<IFlavorsContext>(
   {} as IFlavorsContext
 );
 
-export function FlavorProvider({ children }: IFavoriteProviderProps) {
+export function FlavorProvider({ children }: IFlavorProviderProps) {
   const [selectedFlavors, setSelectedFlavors] = useState<IDraggableItem[]>([]);
 
   const addFlavor = (flavor: Flavor) => {
@@ -26,7 +26,6 @@ export function FlavorProvider({ children }: IFavoriteProviderProps) {
   };
 
   const removeFlavor = (item: IDraggableItem) => {
-    console.log("test");
     let temp = Array.from(selectedFlavors);
     const index = temp.indexOf(item);
     temp[index].flavor = null;

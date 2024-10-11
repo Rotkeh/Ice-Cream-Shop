@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { DraggableItem, FlavorItem, NutritionTable } from "../components";
-import { IceCream, Flavor, IDraggableItem } from "../interfaces";
+import { Flavor, IDraggableItem } from "../interfaces";
 import "../css/CustomIceCreamPage.css";
 
 import {
@@ -29,7 +29,6 @@ export function CustomIceCreamPage() {
     try {
       const response = await fetch(data);
       const result = await response.json();
-      console.log(result);
       setFlavors(result.IceCreamFlavors);
     } catch (error) {
       console.error("Error reading JSON file:", error);

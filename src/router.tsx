@@ -6,6 +6,7 @@ import {
 import { App } from "./components";
 import {
   BrowsePage,
+  CartPage,
   CustomIceCreamPage,
   ErrorPage,
   HomePage,
@@ -19,6 +20,7 @@ export const router = createBrowserRouter(
       <Route index element={<HomePage />} />
       <Route element={<BrowsePage />} path="browse" />
       <Route element={<CustomIceCreamPage />} path="custom" />
+      <Route element={<CartPage />} path="cart" />
       <Route
         element={<ItemPage />}
         path="item/:id"

@@ -5,9 +5,6 @@ import { FlavorContext } from "../context";
 
 export function FlavorItem({ flavor, picked, item }: FlavorProp) {
   const { addFlavor, removeFlavor } = useContext(FlavorContext);
-  function test() {
-    console.log("test2");
-  }
   return (
     <div className="flavor">
       <figure className="flavor-img_container">
@@ -24,7 +21,7 @@ export function FlavorItem({ flavor, picked, item }: FlavorProp) {
       <div className="button_container">
         <button
           disabled={picked && !flavor}
-          onClick={() => (picked ? test() : addFlavor(flavor!))}
+          onClick={() => (picked ? removeFlavor(item!) : addFlavor(flavor!))}
           data-no-dnd={"true"}
         >
           {picked ? "Remove" : "Add"}

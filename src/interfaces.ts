@@ -60,3 +60,34 @@ export interface IFlavorsContext {
   addFlavor: (flavor: Flavor) => void;
   removeFlavor: (item: IDraggableItem) => void;
 }
+
+export interface CartCustomIceCream {
+  flavors: Flavor[];
+  amount: number;
+  id: number;
+}
+
+export interface CartIceCream {
+  iceCream: IceCream;
+  amount: number;
+  id: number;
+}
+
+export interface CartIceCreamItemProp {
+  iceCream: CartIceCream;
+}
+
+export interface Cart {
+  iceCreams: CartIceCream[];
+  customIceCreams: CartCustomIceCream[];
+}
+
+export interface ICartContext {
+  cartItems: Cart;
+  addIceCreamToCart: (cartItem: CartIceCream) => void;
+  addCustomIceCreamToCart: (cartItem: CartCustomIceCream) => void;
+  removeIceCreamFromCart: (id: number) => void;
+  removeCustomIceCreamFromCart: (id: number) => void;
+  updateIceCreamToCart: (id: number, amount: number) => void;
+  updateCustomIceCreamToCart: (id: number, amount: number) => void;
+}

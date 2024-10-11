@@ -11,3 +11,4 @@ export * from "./SimiliarProducts";
 export * from "./Ingredients";
 export * from "./DraggableItem";
 export * from "./FlavorItem";
+export * from "./CartIceCreamItem";
