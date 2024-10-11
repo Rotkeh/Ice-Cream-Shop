@@ -9,3 +9,5 @@ export * from "./Pagination";
 export * from "./NutritionTable";
 export * from "./SimiliarProducts";
 export * from "./Ingredients";
+export * from "./DraggableItem";
+export * from "./FlavorItem";

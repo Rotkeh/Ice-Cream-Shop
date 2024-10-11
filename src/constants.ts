@@ -1,1 +1,1 @@
-export const filePath = "/data.json";
+export const data = "/data.json";

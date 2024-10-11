@@ -8,19 +8,19 @@ export function HomePage() {
   const [latest, setLatest] = useState<IceCream[]>();
   const filePath = "/data.json";
 
-  async function fetchJsonData() {
+  async function getIceCreams() {
     try {
       const response = await fetch(filePath);
       const result = await response.json();
       console.log(result);
-      setLatest(result);
+      setLatest(result.IceCreams);
     } catch (error) {
       console.error("Error reading JSON file:", error);
     }
   }
 
   useEffect(() => {
-    fetchJsonData();
+    getIceCreams();
   }, []);
   return (
     <main>

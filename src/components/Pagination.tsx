@@ -56,7 +56,10 @@ export function Pagination({ data }: IPaginationDataProps) {
       </div>
       <section className="items">
         {currentItems.map((item) => (
-          <IceCreamCard iceCream={item as IceCream} />
+          <IceCreamCard
+            key={(item as IceCream).id}
+            iceCream={item as IceCream}
+          />
         ))}
       </section>
     </nav>

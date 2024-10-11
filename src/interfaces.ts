@@ -21,6 +21,11 @@ export interface Nutrition {
   fiber: number;
 }
 
+export interface Flavor {
+  name: string;
+  imageUrl: string;
+}
+
 export interface IceCreamProp {
   iceCream: IceCream;
 }
@@ -31,4 +36,27 @@ export interface IceCreamNutritionProp {
 
 export interface IceCreamIngredientProp {
   ingredients: string[];
+}
+
+export interface IDraggableItem {
+  id: number;
+  flavor: Flavor | null;
+}
+
+export interface FlavorProp {
+  flavor: Flavor | null;
+  picked: boolean;
+  item?: IDraggableItem;
+}
+
+export interface DraggableItemProp {
+  id: number;
+  item: IDraggableItem;
+}
+
+export interface IFlavorsContext {
+  selectedFlavors: IDraggableItem[];
+  setupFlavors: (flavors: any) => void;
+  addFlavor: (flavor: Flavor) => void;
+  removeFlavor: (item: IDraggableItem) => void;
 }

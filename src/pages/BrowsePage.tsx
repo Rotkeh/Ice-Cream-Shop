@@ -1,23 +1,23 @@
 import { useEffect, useState } from "react";
 import { IceCream } from "../interfaces";
 import { Pagination } from "../components";
-import { filePath } from "../constants";
+import { data } from "../constants";
 
 export function BrowsePage() {
   const [iceCreams, setIceCreams] = useState<IceCream[]>([]);
 
-  async function fetchJsonData() {
+  async function getIceCreams() {
     try {
-      const response = await fetch(filePath);
+      const response = await fetch(data);
       const result = await response.json();
-      setIceCreams(result);
+      setIceCreams(result.IceCreams);
     } catch (error) {
       console.error("Error reading JSON file:", error);
     }
   }
 
   useEffect(() => {
-    fetchJsonData();
+    getIceCreams();
   }, []);
   return (
     <main>

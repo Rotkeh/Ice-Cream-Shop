@@ -1,0 +1,28 @@
+.flavor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.5rem;
+  border: 2px solid gray;
+  .flavor-img_container {
+    padding: 0.25rem;
+    flex: 1;
+    .flamor_img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+    }
+  }
+  .flavor_name {
+    flex: 4;
+    text-align: center;
+    font-size: 1.5rem;
+    cursor: grab;
+  }
+  .button_container {
+    flex: 1;
+    button {
+      padding: 1rem;
+      margin: 0 auto;
+    }
+  }
+}

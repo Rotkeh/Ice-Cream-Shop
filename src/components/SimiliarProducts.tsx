@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import "../css/SimiliarProducts.css";
 import { IceCream, IceCreamProp } from "../interfaces";
-import { filePath } from "../constants";
+import { data } from "../constants";
 import { IceCreamCard } from "./IceCreamCard";
 
 export function SimiliarProducts({ iceCream }: IceCreamProp) {
   const [similiarIceCreams, setSimiliarIceCreams] = useState<IceCream[]>([]);
   async function getSimiliar() {
     try {
-      const response = await fetch(filePath);
+      const response = await fetch(data);
       const result: IceCream[] = await response.json();
       let filtered = result.filter((i) => i.type === iceCream.type);
       filtered = filtered.sort(
