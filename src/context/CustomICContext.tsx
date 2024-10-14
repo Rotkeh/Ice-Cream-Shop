@@ -41,7 +41,12 @@ export function FlavorProvider({ children }: IFlavorProviderProps) {
 
   return (
     <FlavorContext.Provider
-      value={{ selectedFlavors, setupFlavors, addFlavor, removeFlavor }}
+      value={{
+        selectedFlavors,
+        setupFlavors,
+        addFlavor,
+        removeFlavor,
+      }}
     >
       {children}
     </FlavorContext.Provider>

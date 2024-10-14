@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { IceCream } from "../interfaces";
 import { Pagination } from "../components";
-import { data } from "../constants";
+import { data } from "../variables";
 
 export function BrowsePage() {
   const [iceCreams, setIceCreams] = useState<IceCream[]>([]);

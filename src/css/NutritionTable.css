@@ -1,4 +1,4 @@
-.item-nutrition {
+.nutrition {
   grid-column: 5 / -1;
   grid-row: span 2;
   display: grid;

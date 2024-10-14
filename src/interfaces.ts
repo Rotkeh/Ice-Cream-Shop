@@ -1,3 +1,5 @@
+import { IceCreamContainer } from "./enums";
+
 export interface IceCream {
   id: number;
   title: string;
@@ -23,7 +25,10 @@ export interface Nutrition {
 
 export interface Flavor {
   name: string;
+  price: number;
   imageUrl: string;
+  ingredients: string[];
+  nutrition: Nutrition;
 }
 
 export interface IceCreamProp {
@@ -65,6 +70,8 @@ export interface CartCustomIceCream {
   flavors: Flavor[];
   amount: number;
   id: number;
+  price: number;
+  container: IceCreamContainer;
 }
 
 export interface CartIceCream {
@@ -73,13 +80,17 @@ export interface CartIceCream {
   id: number;
 }
 
+export interface Cart {
+  iceCreams: CartIceCream[];
+  customIceCreams: CartCustomIceCream[];
+}
+
 export interface CartIceCreamItemProp {
   iceCream: CartIceCream;
 }
 
-export interface Cart {
-  iceCreams: CartIceCream[];
-  customIceCreams: CartCustomIceCream[];
+export interface CartCustomIceCreamItemProp {
+  customIceCream: CartCustomIceCream;
 }
 
 export interface ICartContext {
@@ -90,4 +101,6 @@ export interface ICartContext {
   removeCustomIceCreamFromCart: (id: number) => void;
   updateIceCreamToCart: (id: number, amount: number) => void;
   updateCustomIceCreamToCart: (id: number, amount: number) => void;
+  addIceCreamAmount: (id: number, amountToAdd: number) => void;
+  addCustomIceCreamAmount: (id: number, amountToAdd: number) => void;
 }

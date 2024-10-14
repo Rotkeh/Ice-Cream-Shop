@@ -1,9 +1,9 @@
-.cart-ic-item {
+.cart-cic-item {
   display: flex;
   text-align: center;
   align-items: center;
   column-gap: 0.5rem;
-  .cart-ic-img_container {
+  .cart-item-img_container {
     flex: 1;
     .cart-item_img {
       width: 75%;

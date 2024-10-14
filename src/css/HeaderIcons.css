@@ -5,6 +5,7 @@
   figure {
     margin: auto;
     width: 75%;
+    cursor: pointer;
     img {
       width: 100%;
     }

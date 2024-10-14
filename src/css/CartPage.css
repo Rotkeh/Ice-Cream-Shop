@@ -1,0 +1,24 @@
+.cart_header {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.cart-ic {
+  grid-column: 1 / 5;
+  padding: 1rem;
+  .cart-ic_header {
+    text-align: center;
+  }
+}
+
+.cart-checkout {
+  grid-column: 5 / -1;
+  text-align: center;
+}
+
+.cart-cic {
+  grid-column: 1 / 5;
+  .cart-items-cic_header {
+    text-align: center;
+  }
+}

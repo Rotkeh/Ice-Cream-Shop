@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "../css/SimiliarProducts.css";
 import { IceCream, IceCreamProp } from "../interfaces";
-import { data } from "../constants";
+import { data } from "../variables";
 import { IceCreamCard } from "./IceCreamCard";
 
 export function SimiliarProducts({ iceCream }: IceCreamProp) {

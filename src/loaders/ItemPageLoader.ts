@@ -1,5 +1,5 @@
 import { LoaderFunctionArgs } from "react-router-dom";
-import { data } from "../constants";
+import { data } from "../variables";
 import { IceCream } from "../interfaces";
 
 export const fetchDataFromId = async ({ params }: LoaderFunctionArgs) => {

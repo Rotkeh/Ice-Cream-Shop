@@ -403,83 +403,217 @@
   "IceCreamFlavors": [
     {
       "name": "Vanilla",
-      "imageUrl": "https://freepngimg.com/download/temp_jpeg/25127-5-ice-cream-scoop-transparent-image.jpeg"
+      "price": 2.0,
+      "imageUrl": "https://freepngimg.com/download/temp_jpeg/25127-5-ice-cream-scoop-transparent-image.jpeg",
+      "ingredients": ["Milk", "Cream", "Sugar", "Vanilla Extract"],
+      "nutrition": {
+        "kcal": 180,
+        "weight": 100,
+        "carbohydrates": 22,
+        "sugar": 20,
+        "fat": 9,
+        "protein": 3,
+        "fiber": 0
+      }
     },
     {
       "name": "Chocolate",
-      "imageUrl": "https://freepngimg.com/download/temp_jpeg/25127-5-ice-cream-scoop-transparent-image.jpeg"
+      "price": 2.0,
+      "imageUrl": "https://freepngimg.com/download/temp_jpeg/25127-5-ice-cream-scoop-transparent-image.jpeg",
+      "ingredients": ["Milk", "Cream", "Cocoa Powder", "Sugar"],
+      "nutrition": {
+        "kcal": 210,
+        "weight": 100,
+        "carbohydrates": 28,
+        "sugar": 25,
+        "fat": 11,
+        "protein": 4,
+        "fiber": 2
+      }
     },
     {
       "name": "Strawberry",
-      "imageUrl": "https://freepngimg.com/download/temp_jpeg/25127-5-ice-cream-scoop-transparent-image.jpeg"
+      "price": 2.0,
+      "imageUrl": "https://freepngimg.com/download/temp_jpeg/25127-5-ice-cream-scoop-transparent-image.jpeg",
+      "ingredients": ["Milk", "Cream", "Strawberries", "Sugar"],
+      "nutrition": {
+        "kcal": 170,
+        "weight": 100,
+        "carbohydrates": 21,
+        "sugar": 19,
+        "fat": 8,
+        "protein": 2,
+        "fiber": 1
+      }
     },
     {
       "name": "Mint Chocolate Chip",
-      "imageUrl": "https://freepngimg.com/download/temp_jpeg/25127-5-ice-cream-scoop-transparent-image.jpeg"
+      "price": 2.0,
+      "imageUrl": "https://freepngimg.com/download/temp_jpeg/25127-5-ice-cream-scoop-transparent-image.jpeg",
+      "ingredients": [
+        "Milk",
+        "Cream",
+        "Mint Extract",
+        "Chocolate Chips",
+        "Sugar"
+      ],
+      "nutrition": {
+        "kcal": 230,
+        "weight": 100,
+        "carbohydrates": 28,
+        "sugar": 25,
+        "fat": 11,
+        "protein": 3,
+        "fiber": 1
+      }
     },
     {
       "name": "Cookie Dough",
-      "imageUrl": "https://freepngimg.com/download/temp_jpeg/25127-5-ice-cream-scoop-transparent-image.jpeg"
+      "price": 2.0,
+      "imageUrl": "https://freepngimg.com/download/temp_jpeg/25127-5-ice-cream-scoop-transparent-image.jpeg",
+      "ingredients": ["Milk", "Cream", "Cookie Dough", "Sugar"],
+      "nutrition": {
+        "kcal": 250,
+        "weight": 100,
+        "carbohydrates": 30,
+        "sugar": 27,
+        "fat": 12,
+        "protein": 4,
+        "fiber": 1
+      }
     },
     {
       "name": "Butter Pecan",
-      "imageUrl": "https://freepngimg.com/download/temp_jpeg/25127-5-ice-cream-scoop-transparent-image.jpeg"
+      "price": 2.0,
+      "imageUrl": "https://freepngimg.com/download/temp_jpeg/25127-5-ice-cream-scoop-transparent-image.jpeg",
+      "ingredients": ["Milk", "Cream", "Pecans", "Sugar"],
+      "nutrition": {
+        "kcal": 260,
+        "weight": 100,
+        "carbohydrates": 28,
+        "sugar": 25,
+        "fat": 14,
+        "protein": 3,
+        "fiber": 1
+      }
     },
     {
       "name": "Rocky Road",
-      "imageUrl": "https://freepngimg.com/download/temp_jpeg/25127-5-ice-cream-scoop-transparent-image.jpeg"
+      "price": 2.0,
+      "imageUrl": "https://freepngimg.com/download/temp_jpeg/25127-5-ice-cream-scoop-transparent-image.jpeg",
+      "ingredients": [
+        "Milk",
+        "Cream",
+        "Marshmallows",
+        "Chocolate",
+        "Almonds",
+        "Sugar"
+      ],
+      "nutrition": {
+        "kcal": 270,
+        "weight": 100,
+        "carbohydrates": 34,
+        "sugar": 30,
+        "fat": 13,
+        "protein": 4,
+        "fiber": 2
+      }
     },
     {
       "name": "Pistachio",
-      "imageUrl": "https://freepngimg.com/download/temp_jpeg/25127-5-ice-cream-scoop-transparent-image.jpeg"
+      "price": 2.0,
+      "imageUrl": "https://freepngimg.com/download/temp_jpeg/25127-5-ice-cream-scoop-transparent-image.jpeg",
+      "ingredients": ["Milk", "Cream", "Pistachios", "Sugar"],
+      "nutrition": {
+        "kcal": 250,
+        "weight": 100,
+        "carbohydrates": 27,
+        "sugar": 24,
+        "fat": 14,
+        "protein": 4,
+        "fiber": 2
+      }
     },
     {
       "name": "Salted Caramel",
-      "imageUrl": "https://freepngimg.com/download/temp_jpeg/25127-5-ice-cream-scoop-transparent-image.jpeg"
+      "price": 2.0,
+      "imageUrl": "https://freepngimg.com/download/temp_jpeg/25127-5-ice-cream-scoop-transparent-image.jpeg",
+      "ingredients": ["Milk", "Cream", "Caramel", "Sugar", "Salt"],
+      "nutrition": {
+        "kcal": 260,
+        "weight": 100,
+        "carbohydrates": 32,
+        "sugar": 29,
+        "fat": 13,
+        "protein": 3,
+        "fiber": 0
+      }
     },
     {
       "name": "Mango Sorbet",
-      "imageUrl": "https://freepngimg.com/download/temp_jpeg/25127-5-ice-cream-scoop-transparent-image.jpeg"
+      "price": 2.0,
+      "imageUrl": "https://freepngimg.com/download/temp_jpeg/25127-5-ice-cream-scoop-transparent-image.jpeg",
+      "ingredients": ["Mango", "Sugar", "Water"],
+      "nutrition": {
+        "kcal": 150,
+        "weight": 100,
+        "carbohydrates": 36,
+        "sugar": 32,
+        "fat": 0,
+        "protein": 1,
+        "fiber": 2
+      }
     },
     {
       "name": "Coffee",
-      "imageUrl": "https://freepngimg.com/download/temp_jpeg/25127-5-ice-cream-scoop-transparent-image.jpeg"
+      "price": 2.0,
+      "imageUrl": "https://freepngimg.com/download/temp_jpeg/25127-5-ice-cream-scoop-transparent-image.jpeg",
+      "ingredients": ["Milk", "Cream", "Coffee", "Sugar"],
+      "nutrition": {
+        "kcal": 240,
+        "weight": 100,
+        "carbohydrates": 25,
+        "sugar": 23,
+        "fat": 13,
+        "protein": 3,
+        "fiber": 0
+      }
     },
     {
       "name": "Cookies and Cream",
-      "imageUrl": "https://freepngimg.com/download/temp_jpeg/25127-5-ice-cream-scoop-transparent-image.jpeg"
+      "price": 2.0,
+      "imageUrl": "https://freepngimg.com/download/temp_jpeg/25127-5-ice-cream-scoop-transparent-image.jpeg",
+      "ingredients": ["Milk", "Cream", "Chocolate Cookies", "Sugar"],
+      "nutrition": {
+        "kcal": 240,
+        "weight": 100,
+        "carbohydrates": 29,
+        "sugar": 26,
+        "fat": 12,
+        "protein": 3,
+        "fiber": 1
+      }
     },
     {
       "name": "Birthday Cake",
-      "imageUrl": "https://freepngimg.com/download/temp_jpeg/25127-5-ice-cream-scoop-transparent-image.jpeg"
-    },
-    {
-      "name": "Peanut Butter Cup",
-      "imageUrl": "https://freepngimg.com/download/temp_jpeg/25127-5-ice-cream-scoop-transparent-image.jpeg"
-    },
-    {
-      "name": "Lemon Sorbet",
-      "imageUrl": "https://freepngimg.com/download/temp_jpeg/25127-5-ice-cream-scoop-transparent-image.jpeg"
-    },
-    {
-      "name": "Coconut",
-      "imageUrl": "https://freepngimg.com/download/temp_jpeg/25127-5-ice-cream-scoop-transparent-image.jpeg"
-    },
-    {
-      "name": "Raspberry Ripple",
-      "imageUrl": "https://freepngimg.com/download/temp_jpeg/25127-5-ice-cream-scoop-transparent-image.jpeg"
-    },
-    {
-      "name": "Matcha Green Tea",
-      "imageUrl": "https://freepngimg.com/download/temp_jpeg/25127-5-ice-cream-scoop-transparent-image.jpeg"
-    },
-    {
-      "name": "Blackberry Swirl",
-      "imageUrl": "https://freepngimg.com/download/temp_jpeg/25127-5-ice-cream-scoop-transparent-image.jpeg"
-    },
-    {
-      "name": "Brownie Batter",
-      "imageUrl": "https://freepngimg.com/download/temp_jpeg/25127-5-ice-cream-scoop-transparent-image.jpeg"
+      "price": 2.0,
+      "imageUrl": "https://freepngimg.com/download/temp_jpeg/25127-5-ice-cream-scoop-transparent-image.jpeg",
+      "ingredients": [
+        "Milk",
+        "Cream",
+        "Cake Pieces",
+        "Sugar",
+        "Vanilla Extract"
+      ],
+      "nutrition": {
+        "kcal": 280,
+        "weight": 100,
+        "carbohydrates": 35,
+        "sugar": 32,
+        "fat": 14,
+        "protein": 4,
+        "fiber": 1
+      }
     }
   ]
 }

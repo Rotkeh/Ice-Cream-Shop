@@ -18,6 +18,10 @@
     font-size: 1.5rem;
     cursor: grab;
   }
+  .flavor_price {
+    flex: 1;
+    text-align: center;
+  }
   .button_container {
     flex: 1;
     button {

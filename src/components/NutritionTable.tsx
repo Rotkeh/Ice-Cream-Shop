@@ -1,9 +1,23 @@
 import { IceCreamNutritionProp } from "../interfaces";
 import "../css/NutritionTable.css";
+import { useEffect } from "react";
 
 export function NutritionTable({ nutrition }: IceCreamNutritionProp) {
+  useEffect(() => {
+    if (!nutrition) {
+      nutrition = {
+        weight: 0,
+        kcal: 0,
+        carbohydrates: 0,
+        sugar: 0,
+        fat: 0,
+        protein: 0,
+        fiber: 0,
+      };
+    }
+  }, []);
   return (
-    <section className="item-nutrition">
+    <section className="nutrition">
       <h5 className="item-nutrition_header">Nutrition</h5>
       <p className="nutrition_category">weight</p>
       <p className="nutrition_data">{nutrition.weight}</p>

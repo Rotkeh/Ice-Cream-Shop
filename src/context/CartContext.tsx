@@ -13,15 +13,22 @@ interface ICartProviderProps {
 export const CartContext = createContext<ICartContext>({} as ICartContext);
 
 export function CartProvider({ children }: ICartProviderProps) {
-  const [cartItems, setCartItems] = useState<Cart>({} as Cart);
+  const [cartItems, setCartItems] = useState<Cart>({
+    iceCreams: [],
+    customIceCreams: [],
+  });
 
   const addIceCreamToCart = (cartItem: CartIceCream) => {
-    setCartItems((prev) => {
-      return {
-        ...prev,
-        iceCreams: [...prev.iceCreams, cartItem],
-      };
-    });
+    if (cartItems.iceCreams.some((ic) => ic.id === cartItem.id)) {
+      addIceCreamAmount(cartItem.id, 1);
+    } else {
+      setCartItems((prev) => {
+        return {
+          ...prev,
+          iceCreams: [...prev.iceCreams, cartItem],
+        };
+      });
+    }
   };
 
   const addCustomIceCreamToCart = (cartItem: CartCustomIceCream) => {
@@ -73,6 +80,16 @@ export function CartProvider({ children }: ICartProviderProps) {
     });
   };
 
+  const addIceCreamAmount = (id: number, amountToAdd: number) => {
+    const ic = cartItems.iceCreams.find((ic) => ic.id === id);
+    updateIceCreamToCart(id, ic?.amount! + amountToAdd);
+  };
+
+  const addCustomIceCreamAmount = (id: number, amountToAdd: number) => {
+    const cic = cartItems.customIceCreams.find((cic) => cic.id === id);
+    updateCustomIceCreamToCart(id, cic?.amount! + amountToAdd);
+  };
+
   return (
     <CartContext.Provider
       value={{
@@ -83,6 +100,8 @@ export function CartProvider({ children }: ICartProviderProps) {
         removeCustomIceCreamFromCart,
         updateIceCreamToCart,
         updateCustomIceCreamToCart,
+        addIceCreamAmount,
+        addCustomIceCreamAmount,
       }}
     >
       {children}
