@@ -61,9 +61,10 @@ export interface DraggableItemProp {
 
 export interface IFlavorsContext {
   selectedFlavors: IDraggableItem[];
-  setupFlavors: (flavors: any) => void;
+  updateSelectedFlavors: (flavors: any) => void;
   addFlavor: (flavor: Flavor) => void;
   removeFlavor: (item: IDraggableItem) => void;
+  resetFlavors: (option: string) => void;
 }
 
 export interface CartCustomIceCream {

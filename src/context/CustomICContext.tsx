@@ -1,5 +1,6 @@
 import { createContext, ReactNode, useState } from "react";
 import { Flavor, IDraggableItem, IFlavorsContext } from "../interfaces";
+import { IceCreamContainer } from "../enums";
 
 interface IFlavorProviderProps {
   children: ReactNode;
@@ -21,7 +22,7 @@ export function FlavorProvider({ children }: IFlavorProviderProps) {
     }
   };
 
-  const setupFlavors = (flavors: any) => {
+  const updateSelectedFlavors = (flavors: any) => {
     setSelectedFlavors(flavors);
   };
 
@@ -39,13 +40,26 @@ export function FlavorProvider({ children }: IFlavorProviderProps) {
     return 0;
   }
 
+  const resetFlavors = (option: string) => {
+    let emptyFlavors: IDraggableItem[] = [];
+    for (
+      let i = 1;
+      i <= IceCreamContainer[option as keyof typeof IceCreamContainer];
+      i++
+    ) {
+      emptyFlavors.push({ id: i, flavor: null });
+    }
+    updateSelectedFlavors(emptyFlavors);
+  };
+
   return (
     <FlavorContext.Provider
       value={{
         selectedFlavors,
-        setupFlavors,
+        updateSelectedFlavors,
         addFlavor,
         removeFlavor,
+        resetFlavors,
       }}
     >
       {children}

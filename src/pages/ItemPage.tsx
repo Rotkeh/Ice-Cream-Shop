@@ -1,13 +1,24 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { IceCream } from "../interfaces";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Ingredients, NutritionTable, SimiliarProducts } from "../components";
 import "../css/ItemPage.css";
+import { CartContext } from "../context/CartContext";
 
 export function ItemPage() {
   const iceCreamData = useLoaderData() as IceCream;
   const [iceCream] = useState<IceCream>(iceCreamData);
   const [count, setCount] = useState<number>(1);
+  const { addIceCreamToCart } = useContext(CartContext);
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    addIceCreamToCart({
+      iceCream: iceCream,
+      amount: count,
+      id: iceCream.id,
+    });
+  };
   return (
     <main>
       <figure className="item_img-container">
@@ -37,8 +48,18 @@ export function ItemPage() {
           ? `${count} x ${iceCream.price}$ = ${iceCream.price * count}$`
           : iceCream.price + "$"}
       </p>
-      <button className="item_button">Buy now</button>
-      <button className="item_button">Add to cart</button>
+      <button
+        className="item_button"
+        onClick={() => {
+          handleButtonClick();
+          navigate("/cart");
+        }}
+      >
+        Buy now
+      </button>
+      <button className="item_button" onClick={() => handleButtonClick()}>
+        Add to cart
+      </button>
       <div className="line" />
       <section className="item-info">
         <p>Made by {iceCream.madeBy}</p>

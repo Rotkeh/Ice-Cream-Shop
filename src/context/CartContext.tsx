@@ -20,7 +20,7 @@ export function CartProvider({ children }: ICartProviderProps) {
 
   const addIceCreamToCart = (cartItem: CartIceCream) => {
     if (cartItems.iceCreams.some((ic) => ic.id === cartItem.id)) {
-      addIceCreamAmount(cartItem.id, 1);
+      addIceCreamAmount(cartItem.id, cartItem.amount);
     } else {
       setCartItems((prev) => {
         return {

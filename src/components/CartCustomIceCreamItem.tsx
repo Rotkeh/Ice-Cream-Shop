@@ -2,6 +2,7 @@ import { CartCustomIceCreamItemProp } from "../interfaces";
 import "../css/CartCustomIceCreamItem.css";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
+import { IceCreamContainer } from "../enums";
 
 export function CartCustomIceCreamItem({
   customIceCream,
@@ -25,6 +26,10 @@ export function CartCustomIceCreamItem({
             <p>{f.price}</p>
           </li>
         ))}
+        <li>
+          {customIceCream.container}{" "}
+          {Number(IceCreamContainer[customIceCream.container]) / 2}
+        </li>
       </ul>
       <p className="cart-item_price">{customIceCream.price}$</p>
       <div className="cart-item-amount_container">

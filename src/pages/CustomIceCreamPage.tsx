@@ -1,22 +1,13 @@
 import { ReactNode, useContext, useEffect, useState } from "react";
-import { DraggableItem, FlavorItem, NutritionTable } from "../components";
-import { Flavor, IDraggableItem, Nutrition } from "../interfaces";
+import {
+  DndList,
+  FlavorItem,
+  Ingredients,
+  NutritionTable,
+} from "../components";
+import { Flavor, Nutrition } from "../interfaces";
 import "../css/CustomIceCreamPage.css";
 import "../enums";
-
-import {
-  closestCorners,
-  DndContext,
-  useSensor,
-  useSensors,
-} from "@dnd-kit/core";
-import {
-  arrayMove,
-  SortableContext,
-  sortableKeyboardCoordinates,
-  verticalListSortingStrategy,
-} from "@dnd-kit/sortable";
-import { PointerSensor, KeyboardSensor, TouchSensor } from "../CustomSensors";
 import { data, getCustomIceCreamId } from "../variables";
 import { FlavorContext } from "../context";
 import { IceCreamContainer } from "../enums";
@@ -27,12 +18,13 @@ export function CustomIceCreamPage() {
   const [count, setCount] = useState<number>(1);
   const [price, setPrice] = useState<number>(0);
   const [flavors, setFlavors] = useState<Flavor[]>([]);
-  const { selectedFlavors, setupFlavors } = useContext(FlavorContext);
+  const { selectedFlavors, resetFlavors } = useContext(FlavorContext);
   const { addCustomIceCreamToCart } = useContext(CartContext);
   const [selectedOption, setSelectedOption] = useState("0");
   const [totalNutrition, setTotalNutrition] = useState<Nutrition>(
     {} as Nutrition
   );
+  const [ingredients, setIngredients] = useState<string[]>([]);
   const navigate = useNavigate();
 
   async function getFlavors() {
@@ -45,45 +37,12 @@ export function CustomIceCreamPage() {
     }
   }
 
-  const getTaskPos = (id: number) =>
-    selectedFlavors.findIndex((flavor) => flavor.id === id);
-
-  const handleDragEnd = (event: { active: any; over: any }) => {
-    const { active, over } = event;
-    if (active.id === over.id) return;
-
-    setupFlavors((flavors: any) => {
-      const originalPos = getTaskPos(active.id);
-      const newPos = getTaskPos(over.id);
-
-      return arrayMove(flavors, originalPos, newPos);
-    });
-  };
-
-  const sensors = useSensors(
-    useSensor(PointerSensor),
-    useSensor(TouchSensor),
-    useSensor(KeyboardSensor, { coordinateGetter: sortableKeyboardCoordinates })
-  );
-
   function getContainerImg() {
     return "";
   }
 
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedOption(event.target.value);
-  };
-
-  const resetFlavors = () => {
-    let emptyFlavors: IDraggableItem[] = [];
-    for (
-      let i = 1;
-      i <= IceCreamContainer[selectedOption as keyof typeof IceCreamContainer];
-      i++
-    ) {
-      emptyFlavors.push({ id: i, flavor: null });
-    }
-    setupFlavors(emptyFlavors);
   };
 
   const getOptions = () => {
@@ -125,7 +84,7 @@ export function CustomIceCreamPage() {
       price: price,
       container: selectedOption as unknown as IceCreamContainer,
     });
-    resetFlavors();
+    resetFlavors(selectedOption);
   };
 
   const updateNutrition = () => {
@@ -156,13 +115,28 @@ export function CustomIceCreamPage() {
     setTotalNutrition(nutrition);
   };
 
+  const updateIngredients = () => {
+    let flavors = selectedFlavors.filter((s) => s.flavor);
+
+    let ingredients = flavors.flatMap((item) => item.flavor!.ingredients);
+
+    ingredients = [...new Set(ingredients)];
+
+    setIngredients(ingredients);
+  };
+
+  useEffect(() => {
+    updatePrice();
+  }, [count]);
+
   useEffect(() => {
     updatePrice();
     updateNutrition();
-  }, [count, selectedFlavors]);
+    updateIngredients();
+  }, [selectedFlavors]);
 
   useEffect(() => {
-    resetFlavors();
+    resetFlavors(selectedOption);
   }, [selectedOption]);
 
   useEffect(() => {
@@ -194,22 +168,7 @@ export function CustomIceCreamPage() {
         </select>
         <h4 className="custom-info_header">Order your ice cream</h4>
         <div className="picked_flavors">
-          <DndContext
-            sensors={sensors}
-            onDragEnd={handleDragEnd}
-            collisionDetection={closestCorners}
-          >
-            <ul>
-              <SortableContext
-                items={selectedFlavors}
-                strategy={verticalListSortingStrategy}
-              >
-                {selectedFlavors.map((flavor) => (
-                  <DraggableItem id={flavor.id} key={flavor.id} item={flavor} />
-                ))}
-              </SortableContext>
-            </ul>
-          </DndContext>
+          <DndList />
           <figure>
             <img src={getContainerImg()} alt="image of the cup/cone" />
           </figure>
@@ -248,16 +207,8 @@ export function CustomIceCreamPage() {
       >
         Add to cart
       </button>
-      <section className="item-nutrition">
-        <h5 className="item-nutrition_header">Nutrition</h5>
-        <NutritionTable nutrition={totalNutrition} />
-      </section>
-      <section className="item-ingredients">
-        <h5 className="item-ingredients_header">Ingredients</h5>
-        {/* {customIceCream!.ingredients.map((ingredient) => (
-          <p key={ingredient}>{ingredient}</p>
-        ))} */}
-      </section>
+      <NutritionTable nutrition={totalNutrition} />
+      <Ingredients ingredients={ingredients} />
     </main>
   );
 }

@@ -9,8 +9,10 @@ export function SimiliarProducts({ iceCream }: IceCreamProp) {
   async function getSimiliar() {
     try {
       const response = await fetch(data);
-      const result: IceCream[] = await response.json();
-      let filtered = result.filter((i) => i.type === iceCream.type);
+      const result = await response.json();
+      let filtered: IceCream[] = result.IceCreams.filter(
+        (i: IceCream) => i.type === iceCream.type
+      );
       filtered = filtered.sort(
         (a, b) =>
           new Date(b.dateAdded).getTime() - new Date(a.dateAdded).getTime()
