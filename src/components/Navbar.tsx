@@ -10,7 +10,7 @@ export function Navbar() {
       <NavLink to={"custom"} className={"nav-link"}>
         Make your own
       </NavLink>
-      <NavLink to={"store"} className={"nav-link"}>
+      <NavLink to={"visit"} className={"nav-link"}>
         Visit us
       </NavLink>
       <form className="search" action="">

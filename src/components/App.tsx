@@ -7,12 +7,12 @@ import { CartProvider } from "../context/CartContext";
 export function App() {
   return (
     <>
-      <Header />
-      <FlavorProvider>
-        <CartProvider>
+      <CartProvider>
+        <Header />
+        <FlavorProvider>
           <Outlet />
-        </CartProvider>
-      </FlavorProvider>
+        </FlavorProvider>
+      </CartProvider>
       <Footer />
     </>
   );

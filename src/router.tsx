@@ -11,6 +11,7 @@ import {
   ErrorPage,
   HomePage,
   ItemPage,
+  VisitPage,
 } from "./pages";
 import { fetchDataFromId } from "./loaders/ItemPageLoader";
 
@@ -21,6 +22,7 @@ export const router = createBrowserRouter(
       <Route element={<BrowsePage />} path="browse" />
       <Route element={<CustomIceCreamPage />} path="custom" />
       <Route element={<CartPage />} path="cart" />
+      <Route element={<VisitPage />} path="visit" />
       <Route
         element={<ItemPage />}
         path="item/:id"

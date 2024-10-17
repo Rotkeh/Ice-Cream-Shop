@@ -13,6 +13,7 @@
       width: 75%;
       aspect-ratio: 1 / 1;
       object-fit: cover;
+      cursor: pointer;
     }
   }
 }

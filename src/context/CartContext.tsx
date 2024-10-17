@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useState } from "react";
+import { createContext, ReactNode, useEffect, useState } from "react";
 import {
   Cart,
   CartCustomIceCream,
@@ -17,6 +17,18 @@ export function CartProvider({ children }: ICartProviderProps) {
     iceCreams: [],
     customIceCreams: [],
   });
+  const [itemCount, setItemCount] = useState<number>(0);
+  useEffect(() => {
+    let count = cartItems.customIceCreams.reduce(
+      (total, item) => total + item.amount,
+      0
+    );
+    count += cartItems.iceCreams.reduce(
+      (total, item) => total + item.amount,
+      0
+    );
+    setItemCount(count);
+  }, [cartItems]);
 
   const addIceCreamToCart = (cartItem: CartIceCream) => {
     if (cartItems.iceCreams.some((ic) => ic.id === cartItem.id)) {
@@ -94,6 +106,7 @@ export function CartProvider({ children }: ICartProviderProps) {
     <CartContext.Provider
       value={{
         cartItems,
+        itemCount,
         addIceCreamToCart,
         addCustomIceCreamToCart,
         removeIceCreamFromCart,

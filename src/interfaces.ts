@@ -96,6 +96,7 @@ export interface CartCustomIceCreamItemProp {
 
 export interface ICartContext {
   cartItems: Cart;
+  itemCount: number;
   addIceCreamToCart: (cartItem: CartIceCream) => void;
   addCustomIceCreamToCart: (cartItem: CartCustomIceCream) => void;
   removeIceCreamFromCart: (id: number) => void;
