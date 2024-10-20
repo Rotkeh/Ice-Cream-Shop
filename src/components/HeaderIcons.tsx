@@ -14,9 +14,13 @@ export function HeaderIcons() {
   return (
     <div className="icons">
       <figure onClick={handleClick}>
-        <div className="header-cart_amount">
-          <p>{itemCount}</p>
-        </div>
+        {itemCount > 0 ? (
+          <div className="header-cart_amount">
+            <p>{itemCount}</p>
+          </div>
+        ) : (
+          ""
+        )}
         <img src={cart} alt="" />
       </figure>
       <figure>

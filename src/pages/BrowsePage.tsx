@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import { IceCream } from "../interfaces";
 import { Pagination } from "../components";
-import { data } from "../variables";
+import { api } from "../variables";
 
 export function BrowsePage() {
   const [iceCreams, setIceCreams] = useState<IceCream[]>([]);
 
   async function getIceCreams() {
     try {
-      const response = await fetch(data);
+      const response = await fetch(`${api}/icecreams`);
       const result = await response.json();
       setIceCreams(result.IceCreams);
     } catch (error) {

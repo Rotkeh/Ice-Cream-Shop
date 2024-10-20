@@ -1,4 +1,5 @@
 export const data = "/data.json";
+export const api = "http://localhost:3000";
 let customIceCreamId = 0;
 export const getCustomIceCreamId = () => {
   return customIceCreamId++;

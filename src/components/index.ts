@@ -14,3 +14,5 @@ export * from "./FlavorItem";
 export * from "./CartIceCreamItem";
 export * from "./CartCustomIceCreamItem";
 export * from "./DndList";
+export * from "./ImageCarousel";
+export * from "./NutritionTableEdit";

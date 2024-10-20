@@ -1,0 +1,19 @@
+.image-carousel {
+  grid-column: 1 / -1;
+  background-color: white;
+}
+
+.carousel-img2 {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: lightblue;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: lightblue;
+}

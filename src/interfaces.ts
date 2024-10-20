@@ -32,11 +32,16 @@ export interface Flavor {
 }
 
 export interface IceCreamProp {
-  iceCream: IceCream;
+  iceCream?: IceCream;
 }
 
 export interface IceCreamNutritionProp {
   nutrition: Nutrition;
+}
+
+export interface EditIceCreamNutritionProp {
+  nutrition: Nutrition;
+  setEditNutrition: (nutrition: Nutrition) => void;
 }
 
 export interface IceCreamIngredientProp {

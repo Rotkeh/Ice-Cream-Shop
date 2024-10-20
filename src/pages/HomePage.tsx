@@ -1,18 +1,19 @@
 import { useEffect, useState } from "react";
 import iceCream from "../assets/iceCream1.jpg";
-import { IceCreamCard, ImageGallery } from "../components";
+import { IceCreamCard, ImageCarousel } from "../components";
 import "../css/HomePage.css";
 import { IceCream } from "../interfaces";
+import { api } from "../variables";
 
 export function HomePage() {
   const [latest, setLatest] = useState<IceCream[]>();
-  const filePath = "/data.json";
 
   async function getIceCreams() {
     try {
-      const response = await fetch(filePath);
+      const response = await fetch(`${api}/icecreams}`);
       const result = await response.json();
-      setLatest(result.IceCreams);
+      console.log(result);
+      setLatest(result);
     } catch (error) {
       console.error("Error reading JSON file:", error);
     }
@@ -68,7 +69,7 @@ export function HomePage() {
           commodi placeat eaque optio sed quaerat mollitia praesentium
           reprehenderit quos aperiam dolores!
         </p>
-        <ImageGallery />
+        <ImageCarousel />
       </article>
     </main>
   );
