@@ -8,12 +8,13 @@ import { CartContext } from "../context/CartContext";
 export function HeaderIcons() {
   const { itemCount } = useContext(CartContext);
   const navigate = useNavigate();
-  function handleClick() {
-    navigate("cart");
-  }
   return (
     <div className="icons">
-      <figure onClick={handleClick}>
+      <figure
+        onClick={() => {
+          navigate("cart");
+        }}
+      >
         {itemCount > 0 ? (
           <div className="header-cart_amount">
             <p>{itemCount}</p>
@@ -23,7 +24,7 @@ export function HeaderIcons() {
         )}
         <img src={cart} alt="" />
       </figure>
-      <figure>
+      <figure onClick={() => navigate("account")}>
         <img src={user} alt="" />
       </figure>
     </div>

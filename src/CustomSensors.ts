@@ -5,7 +5,6 @@ import {
 } from "@dnd-kit/core";
 import { MouseEvent, TouchEvent, KeyboardEvent } from "react";
 
-// Block DnD event propagation if element have "data-no-dnd" attribute
 const handler = ({
   nativeEvent: event,
 }: MouseEvent | TouchEvent | KeyboardEvent) => {

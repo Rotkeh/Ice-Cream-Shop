@@ -1,9 +1,9 @@
-import { IceCreamContainer } from "./enums";
+import { AccountType, IceCreamContainer } from "./enums";
 
 export interface IceCream {
   id: number;
   title: string;
-  type: string;
+  iceCreamType: string;
   description: string;
   price: number;
   madeBy: string;
@@ -110,4 +110,46 @@ export interface ICartContext {
   updateCustomIceCreamToCart: (id: number, amount: number) => void;
   addIceCreamAmount: (id: number, amountToAdd: number) => void;
   addCustomIceCreamAmount: (id: number, amountToAdd: number) => void;
+  clearCart: () => void;
+}
+
+export interface Account {
+  email: string;
+  password: string;
+  name: string;
+  address: string;
+  orderHistory: Order[];
+  type: AccountType;
+}
+
+export interface UpdatedUserData {
+  password?: string;
+  name?: string;
+  address?: string;
+  orderHistory?: Order[];
+  type?: AccountType;
+}
+
+export interface Order {
+  items: Cart;
+  date: string;
+  price: number;
+  id: number;
+}
+
+export interface OrderItemProp {
+  order: Order;
+}
+
+export interface OrderHistoryProp {
+  orders: Order[];
+}
+
+export interface IAccountContext {
+  token: string;
+  login: (token: string) => void;
+  logout: () => void;
+  checkToken: () => void;
+  account: Account;
+  updateUserOrderHistory: (order: Order) => void;
 }

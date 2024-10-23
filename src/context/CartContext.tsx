@@ -102,6 +102,10 @@ export function CartProvider({ children }: ICartProviderProps) {
     updateCustomIceCreamToCart(id, cic?.amount! + amountToAdd);
   };
 
+  const clearCart = () => {
+    setCartItems({ iceCreams: [], customIceCreams: [] });
+  };
+
   return (
     <CartContext.Provider
       value={{
@@ -115,6 +119,7 @@ export function CartProvider({ children }: ICartProviderProps) {
         updateCustomIceCreamToCart,
         addIceCreamAmount,
         addCustomIceCreamAmount,
+        clearCart,
       }}
     >
       {children}

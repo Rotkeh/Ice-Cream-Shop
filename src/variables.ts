@@ -4,6 +4,10 @@ let customIceCreamId = 0;
 export const getCustomIceCreamId = () => {
   return customIceCreamId++;
 };
+let orderId = 0;
+export const getOrderId = () => {
+  return orderId++;
+};
 export const images: string[] = [
   "https://upload.wikimedia.org/wikipedia/commons/a/a9/Venice_-_Ice_cream_parlor_-_4017.jpg",
   "https://portsoyicecream.co.uk/site/wp-content/uploads/ice-cream-collection.jpg",

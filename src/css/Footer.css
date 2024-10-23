@@ -5,8 +5,12 @@
   height: 150px;
   background-color: var(--color-2);
   margin-top: auto;
-  h3 {
+  div {
     grid-column: span 2;
+    padding: 1rem;
+    h3 {
+      font-size: 1.5rem;
+    }
   }
   :first-child {
     grid-column: 3 / 5;

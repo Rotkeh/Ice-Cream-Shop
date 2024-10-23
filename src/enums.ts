@@ -6,3 +6,8 @@ export enum IceCreamContainer {
   medium_cup = 4,
   large_cup = 5,
 }
+
+export enum AccountType {
+  admin = 1,
+  user = 2,
+}

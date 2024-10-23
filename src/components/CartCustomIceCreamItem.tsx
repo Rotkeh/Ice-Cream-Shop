@@ -1,5 +1,5 @@
 import { CartCustomIceCreamItemProp } from "../interfaces";
-import "../css/CartCustomIceCreamItem.css";
+import "../css/CartItem.css";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import { IceCreamContainer } from "../enums";
@@ -10,7 +10,7 @@ export function CartCustomIceCreamItem({
   const { removeCustomIceCreamFromCart, addCustomIceCreamAmount } =
     useContext(CartContext);
   return (
-    <div className="cart-cic-item">
+    <div className="cart-ic-item">
       <figure className="cart-item-img_container">
         <img
           className="cart-item_img"
@@ -20,8 +20,8 @@ export function CartCustomIceCreamItem({
       </figure>
       <h6 className="cart-item_header">Flavors</h6>
       <ul>
-        {customIceCream.flavors.map((f) => (
-          <li key={f.name}>
+        {customIceCream.flavors.map((f, index) => (
+          <li key={f.name + index}>
             <p>{f.name}</p>
             <p>{f.price}</p>
           </li>

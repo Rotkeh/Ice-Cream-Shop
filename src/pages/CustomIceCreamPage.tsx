@@ -33,7 +33,7 @@ export function CustomIceCreamPage() {
       const result = await response.json();
       setFlavors(result.IceCreamFlavors);
     } catch (error) {
-      console.error("Error reading JSON file:", error);
+      console.error("Error fetching data:", error);
     }
   }
 

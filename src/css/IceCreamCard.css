@@ -8,13 +8,19 @@
       width: 100%;
     }
   }
-  .button_container {
+  .card-content_container {
     display: flex;
-    justify-content: space-around;
-    padding: 1rem 0;
-    .card_button {
-      border: 0.5rem;
-      padding: 0.5 1rem;
+    flex-direction: column;
+    padding: 0.5rem;
+    row-gap: 0.5rem;
+    .button_container {
+      display: flex;
+      justify-content: space-around;
+      padding: 1rem 0;
+      .card_button {
+        border: 0.5rem;
+        padding: 0.5 1rem;
+      }
     }
   }
 }

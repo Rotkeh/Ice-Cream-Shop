@@ -24,8 +24,6 @@ export function ImageCarousel() {
         }}
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
-        // onSlideChange={() => console.log("slide change")}
-        // onSwiper={(swiper) => console.log(swiper)}
       >
         {images.map((i) => (
           <SwiperSlide key={i}>

@@ -6,3 +6,6 @@ export * from "./ItemPage";
 export * from "./CartPage";
 export * from "./VisitPage";
 export * from "./EditIceCreamPage";
+export * from "./UserPage";
+export * from "./Login";
+export * from "./Register";

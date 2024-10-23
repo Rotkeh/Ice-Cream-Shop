@@ -1,6 +1,8 @@
 .cart_header {
   grid-column: 1 / -1;
   text-align: center;
+  font-size: 2rem;
+  margin: auto;
 }
 
 .cart-ic {
@@ -8,17 +10,28 @@
   padding: 1rem;
   .cart-ic_header {
     text-align: center;
+    font-size: 1.5rem;
   }
 }
 
 .cart-checkout {
   grid-column: 5 / -1;
+  grid-row: span 2;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  .cart_confirm {
+    margin: 2rem;
+    font-size: 1.5rem;
+  }
 }
 
 .cart-cic {
   grid-column: 1 / 5;
   .cart-items-cic_header {
     text-align: center;
+    font-size: 1.5rem;
   }
 }

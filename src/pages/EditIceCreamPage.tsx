@@ -1,18 +1,17 @@
-import { useNavigate } from "react-router-dom";
-import { IceCream, IceCreamProp, Nutrition } from "../interfaces";
+import { useLoaderData, useNavigate } from "react-router-dom";
+import { IceCream, Nutrition } from "../interfaces";
 import { useState } from "react";
 import { NutritionTableEdit } from "../components";
 import "../css/ItemPage.css";
 import { api } from "../variables";
 
-export function EditIceCreamPage({ iceCream }: IceCreamProp) {
+export function EditIceCreamPage() {
   const navigate = useNavigate();
-
   const getEmptyIceCream = () => {
     return {
       id: 0,
       title: "",
-      type: "",
+      iceCreamType: "",
       description: "",
       price: 0,
       madeBy: "",
@@ -31,8 +30,10 @@ export function EditIceCreamPage({ iceCream }: IceCreamProp) {
     };
   };
 
+  const iceCreamLoaderData = useLoaderData() as IceCream;
+
   const [editedIceCream, setEditedIceCream] = useState<IceCream>(
-    iceCream ? iceCream : getEmptyIceCream()
+    iceCreamLoaderData ? iceCreamLoaderData : getEmptyIceCream()
   );
 
   const updateNutrition = (nutrition: Nutrition) => {
@@ -52,8 +53,24 @@ export function EditIceCreamPage({ iceCream }: IceCreamProp) {
     });
   };
 
+  const handleIngredientsChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { value } = e.target;
+    let ingredients = value.split(",");
+    ingredients.map((i) => {
+      i.trim();
+    });
+    setEditedIceCream({
+      ...editedIceCream,
+      ingredients: ingredients,
+    });
+  };
+
+  const handleImgChange = () => {
+    editedIceCream.imageUrl = "toBeAdded";
+  };
+
   async function handleSaveClick() {
-    if (iceCream) {
+    if (iceCreamLoaderData) {
       try {
         const response = await fetch(`${api}/icecreams/${editedIceCream.id}}`, {
           method: "PUT",
@@ -65,10 +82,11 @@ export function EditIceCreamPage({ iceCream }: IceCreamProp) {
         const result = await response.json();
         console.log(result);
       } catch (error) {
-        console.error("Error reading JSON file:", error);
+        console.error("Error saving edited data:", error);
       }
     } else {
       try {
+        console.log(editedIceCream);
         const response = await fetch(`${api}/icecreams`, {
           method: "POST",
           headers: {
@@ -79,7 +97,7 @@ export function EditIceCreamPage({ iceCream }: IceCreamProp) {
         const result = await response.json();
         console.log(result);
       } catch (error) {
-        console.error("Error reading JSON file:", error);
+        console.error("Error saving new data:", error);
       }
     }
   }
@@ -95,42 +113,68 @@ export function EditIceCreamPage({ iceCream }: IceCreamProp) {
       const result = await response.json();
       console.log(result);
     } catch (error) {
-      console.error("Error reading JSON file:", error);
+      console.error("Error deleting data:", error);
     }
   }
   return (
     <main>
       <figure className="item_img-container">
-        {" "}
-        {editedIceCream.imageUrl === "" ? (
-          <input type="file" onChange={handleChange} />
-        ) : (
+        {editedIceCream.imageUrl !== "" ? (
           <img className="item_img" src={editedIceCream.imageUrl} alt="" />
+        ) : (
+          <p>image</p>
         )}
+        <input type="file" onChange={handleImgChange} name="imageUrl" />
       </figure>
-      <input type="text" onChange={handleChange} className="item_title">
-        {editedIceCream.title}
-      </input>
-      <input type="text" onChange={handleChange} className="item_type">
-        Type {editedIceCream.type}
-      </input>
-      <input type="text" onChange={handleChange} className="item_description">
-        {editedIceCream.description}
-      </input>
+      <h2 className="edit_header">Edit Ice Cream</h2>
+      <input
+        type="text"
+        onChange={handleChange}
+        className="item_title custom_input"
+        name="title"
+        defaultValue={editedIceCream.title}
+        placeholder="title"
+      />
+      <input
+        type="text"
+        onChange={handleChange}
+        name="type"
+        className="item_type custom_input"
+        defaultValue={editedIceCream.iceCreamType}
+        placeholder="type"
+      />
+      <input
+        type="text"
+        onChange={handleChange}
+        name="description"
+        className="item_description custom_input"
+        defaultValue={editedIceCream.description}
+        placeholder="description"
+      />
       <input
         type="text"
         onChange={handleChange}
         name="price"
-        className="item_price"
-      ></input>
+        className="item_price custom_input"
+        defaultValue={editedIceCream.price}
+        placeholder="price"
+      />
       <div className="line" />
       <section className="item-info">
-        <input type="text" onChange={handleChange}>
-          {editedIceCream.madeBy}
-        </input>
-        <input type="text" onChange={handleChange}>
-          {editedIceCream.dateAdded.toString()}
-        </input>
+        <input
+          type="text"
+          onChange={handleChange}
+          name="madeBy"
+          defaultValue={editedIceCream.madeBy}
+          placeholder="made by"
+        />
+        <input
+          type="text"
+          onChange={handleChange}
+          name="dateAdded"
+          defaultValue={editedIceCream.dateAdded}
+          placeholder="date added"
+        />
       </section>
       <NutritionTableEdit
         nutrition={editedIceCream.nutrition}
@@ -138,11 +182,16 @@ export function EditIceCreamPage({ iceCream }: IceCreamProp) {
       />
       <input
         type="text"
-        onChange={handleChange}
+        onChange={handleIngredientsChange}
         className="ingredients"
-      ></input>
+        defaultValue={editedIceCream.ingredients.join(", ")}
+        placeholder='ingredients - seperated by "," example[milk, sugar, vanilla]'
+      />
       <button onClick={handleSaveClick}>Save</button>
-      <button disabled={iceCream ? true : false} onClick={handleDeleteClick}>
+      <button
+        disabled={iceCreamLoaderData ? false : true}
+        onClick={handleDeleteClick}
+      >
         Delete
       </button>
       <button onClick={() => navigate("/")}>Cancel</button>

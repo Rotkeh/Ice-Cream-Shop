@@ -60,6 +60,7 @@
   grid-column: 1 / -1;
   display: grid;
   margin: 1rem;
+  padding: 3rem 0;
   border-radius: 3rem;
   grid-template-columns: subgrid;
   background-color: var(--color-5);

@@ -10,12 +10,11 @@ export function HomePage() {
 
   async function getIceCreams() {
     try {
-      const response = await fetch(`${api}/icecreams}`);
+      const response = await fetch(`${api}/icecreams`);
       const result = await response.json();
-      console.log(result);
       setLatest(result);
     } catch (error) {
-      console.error("Error reading JSON file:", error);
+      console.error("Error fetching data from db:", error);
     }
   }
 

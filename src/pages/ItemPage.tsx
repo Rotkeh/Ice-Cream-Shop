@@ -4,9 +4,12 @@ import { useContext, useState } from "react";
 import { Ingredients, NutritionTable, SimiliarProducts } from "../components";
 import "../css/ItemPage.css";
 import { CartContext } from "../context/CartContext";
+import { AccountContext } from "../context";
+import { AccountType } from "../enums";
 
 export function ItemPage() {
   const iceCreamData = useLoaderData() as IceCream;
+  const { account } = useContext(AccountContext);
   const [iceCream] = useState<IceCream>(iceCreamData);
   const [count, setCount] = useState<number>(1);
   const { addIceCreamToCart } = useContext(CartContext);
@@ -22,10 +25,20 @@ export function ItemPage() {
   return (
     <main>
       <figure className="item_img-container">
+        {account && account.type === AccountType.admin ? (
+          <button
+            className="item-edit_button"
+            onClick={() => navigate(`/edit/${iceCream.id}`)}
+          >
+            Edit
+          </button>
+        ) : (
+          ""
+        )}
         <img className="item_img" src={iceCream.imageUrl} alt="" />
       </figure>
       <h2 className="item_title">{iceCream.title}</h2>
-      <p className="item_type">Type {iceCream.type}</p>
+      <p className="item_type">Type: {iceCream.iceCreamType}</p>
       <p className="item_description">{iceCream.description}</p>
       <input
         className="item_count"

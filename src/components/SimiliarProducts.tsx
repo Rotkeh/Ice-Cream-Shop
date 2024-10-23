@@ -1,28 +1,28 @@
 import { useEffect, useState } from "react";
 import "../css/SimiliarProducts.css";
 import { IceCream, IceCreamProp } from "../interfaces";
-import { data } from "../variables";
+import { api } from "../variables";
 import { IceCreamCard } from "./IceCreamCard";
 
 export function SimiliarProducts({ iceCream }: IceCreamProp) {
   const [similiarIceCreams, setSimiliarIceCreams] = useState<IceCream[]>([]);
   async function getSimiliar() {
     try {
-      const response = await fetch(data);
-      const result = await response.json();
-      let filtered: IceCream[] = result.IceCreams.filter(
-        (i: IceCream) => i.type === iceCream.type
-      );
-      filtered = filtered.sort(
-        (a, b) =>
-          new Date(b.dateAdded).getTime() - new Date(a.dateAdded).getTime()
-      );
-      filtered = filtered.slice(1, 5);
+      const response = await fetch(`${api}/icecreams`);
+      const result: IceCream[] = await response.json();
+      let filtered: IceCream[] = result.filter((i) => {
+        return i.iceCreamType === iceCream!.iceCreamType;
+      });
+      filtered = result.filter((i) => {
+        return i.id !== iceCream!.id;
+      });
+      filtered = filtered.slice(0, 4);
       setSimiliarIceCreams(filtered);
     } catch (error) {
-      console.error("Error reading JSON file:", error);
+      console.error("Error fetching data:", error);
     }
   }
+
   useEffect(() => {
     getSimiliar();
   }, []);

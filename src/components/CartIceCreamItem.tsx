@@ -1,5 +1,5 @@
 import { CartIceCreamItemProp } from "../interfaces";
-import "../css/CartIceCreamItem.css";
+import "../css/CartItem.css";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 
